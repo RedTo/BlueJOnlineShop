@@ -11,21 +11,21 @@ public class Benutzer
     private String name;
     private String eMail;
     private String telefon;
-    private LocalDate birthday;
+    private LocalDate geburtstag;
     private String bankInfo;
-    private String address;
+    private String adresse;
 
     /**
      * Konstruktor für Objekte der Klasse Person
      */
-    public Benutzer(String name, String eMail, String telefon, LocalDate birthday, String bankInfo, String address)
+    public Benutzer(String name, String eMail, String telefon, LocalDate geburtstag, String bankInfo, String adresse)
     {
         this.name = name;
         this.eMail = eMail;
         this.telefon = telefon;
-        this.birthday = birthday;
+        this.geburtstag = geburtstag;
         this.bankInfo = bankInfo;
-        this.address = address;
+        this.adresse = adresse;
         System.out.println("Es wurde ein neuer Benutzer (" + this.name + ", " + this.eMail + ") angelegt.");
     }
     public String gibName()
@@ -50,15 +50,15 @@ public class Benutzer
     {
         this.telefon=telefon;
     }
-    public LocalDate gibBirthday(){
-        return birthday;
+    public LocalDate gibGeburtstag(){
+        return geburtstag;
     }
-    public void aendereBirthday(LocalDate birthday){
-        this.birthday = birthday;
+    public void aendereGeburtstag(LocalDate geburtstag){
+        this.geburtstag = geburtstag;
     }
     public int gibAlter(){
         LocalDate heute = LocalDate.now();
-        Period alter = Period.between(this.birthday, heute);
+        Period alter = Period.between(geburtstag, heute);
         return alter.getYears();
     }
     public String gibBankInfo(){
@@ -68,16 +68,16 @@ public class Benutzer
     {
         this.bankInfo=bankInfo;
     }
-    public String gibAddress(){
-        return address;
+    public String gibAdresse(){
+        return adresse;
     }
-    public void aendereAddress(String address)
+    public void aendereAdresse(String adresse)
     {
-        this.address=address;
+        this.adresse=adresse;
     }
     public void gibDaten()
     {
-           System.out.println("Ihre Daten:" + " Name:" +gibName()+" EmailAdresse: "+ gibEMail()+" Bankdaten: "+  gibBankInfo()
-           +" Alter: "+ gibAlter()+ " Adresse: " +gibAddress()+ "Telefonnummer: " +gibTelefon());
+           System.out.println("Ihre Daten:" + " Name:" + name +" EmailAdresse: "+ eMail +" Bankdaten: "+  bankInfo
+           +" Alter: "+ gibAlter() + " Adresse: " + adresse + "Telefonnummer: " + telefon);
     }
 }

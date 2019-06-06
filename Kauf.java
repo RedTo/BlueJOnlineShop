@@ -8,16 +8,17 @@
 public class Kauf
 {
     private Angebot angebot;
-    private Benutzer käufer;
+    private Benutzer kaeufer;
     private boolean versand;
     private int anzahl;
     /**
      * Konstruktor für Objekte der Klasse Kauf
      */
-    public Kauf()
+    public Kauf(Angebot angebot, Benutzer kaeufer, boolean versand, int anzahl)
     {
-        //prüfen ob käufer alt genug
-        //prüfen ob genügend stk vorhanden
-        //je nach versand option preis + versand oder adresse und preis
+        this.angebot = angebot;
+        this.kaeufer = kaeufer;
+        this.versand = versand;
+        this.anzahl = anzahl;
     }
 }
