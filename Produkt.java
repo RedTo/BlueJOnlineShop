@@ -6,30 +6,34 @@
  */
 public class Produkt
 {
-    private String Name;
-    private String Marke;
-    private String Zustand;
-    private String Beschreibung;
-    private String Produktart;
+    private String name;
+    private String marke;
+    private String zustand;
+    private String beschreibung;
+    private String produktart;
 
     /**
      * Konstruktor für Objekte der Klasse Produkt
      */
-    public Produkt(String Name, String Marke, String Zustand, String Beschreibung, String Produktart)
+    public Produkt(String name, String marke, String zustand, String beschreibung, String produktart)
     {
-        this.Name = Name;
-        this.Marke = Marke;
-        this.Zustand = Zustand;
-        this.Beschreibung = Beschreibung;
-        this.Produktart = Produktart;
+        this.name = name;
+        this.marke = marke;
+        this.zustand = zustand;
+        this.beschreibung = beschreibung;
+        this.produktart = produktart;
     }
     
     public String gibProdukt()
     {
-        return Produktart + " - " + Name + " von der Marke " + Marke + " (" + Zustand + ", " + Beschreibung + ")";
+        return produktart + " - " + name + " von der Marke " + marke + " (" + zustand + ", " + beschreibung + ")";
     }
     
     public String gibProduktKurz(){
-        return Produktart + " - " + Name + " von der Marke " + Marke;
+        return produktart + " - " + name + " von der Marke " + marke;
+    }
+    
+    public String gibName(){
+        return name;
     }
 }

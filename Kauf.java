@@ -21,4 +21,8 @@ public class Kauf
         this.versand = versand;
         this.anzahl = anzahl;
     }
+    
+    public String gibKauf(){
+        return kaeufer.gibName() + " hat (" + anzahl + "x) " + angebot.gibProdukt().gibName() + " von " + angebot.gibVerkaeufer().gibName() + " gekauft.";
+    }
 }
